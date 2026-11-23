@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Solar System Map</title>
+    <style>
+        body {
+            background-color: #ffffff; 
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            text-align: center;
+            color: #e0e1dd;
+        }
+         
+        h2 {
+            color: #e0a96d; 
+        }
+        
+        p {
+            color: black;
+            max-width: 600px;
+            margin: 10px auto 25px auto;
+        }
+
+        .space-map {
+            border: 2px solid #e0a96d;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(224, 169, 109, 0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <h2> Simple Solar System Map</h2>
+    <p>Click on different planets below to explore facts about our neighborhood in space.</p>
+    
+
+    <img src="solar_system.jpg" alt="Solar System Guide" usemap="#spacemap" class="space-map" width="600" height="400">
+    
+    <map name="spacemap">
+        
+        <area shape="circle" coords="202,213,78" href="planet_one.html" target="_blank" alt="Earth Planet">
+        
+        
+        <area shape="circle" coords="386,76,58" href="planet_two.html" target="_blank" alt="Saturn Planet">
+        
+        
+        <area shape="circle" coords="450,323,58" href="planet_three.html" target="_blank" alt="Moon Planet">
+    </map>
+
+</body>
+
+</html>
+

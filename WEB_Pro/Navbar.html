@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Image</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0px;
+        }
+         
+        .sidenav {
+            height: 100%;
+            width: 160px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: red;
+            overflow-x: hidden;
+            padding-top: 20px;
+        }
+       
+        .sidenav a {
+            display: block;
+            text-decoration: none;
+            padding: 6px 8px 6px 16px;
+            color: white;
+        }
+          
+        .sidenav a:hover {
+            color: yellow;
+        }
+        
+        .main {
+            margin-left: 160px;
+            padding: 0px 10px;
+            height: 200px;
+        }
+    </style>   
+</head>
+<body>
+    <div class="sidenav">
+        <a href="#about">About Us</a>
+        <a href="#departments">Departments</a>
+        <a href="#Vision">Vision and Mission</a>
+        <a href="#contact">Contact Us</a>
+    </div>
+       
+    <div class="main">
+        <h1>Sidebar</h1>
+        <h3>This is the main content area. Scroll down to see the fixed full size sidebar in action.</h3>
+    </div>
+</body>
+</html>
+

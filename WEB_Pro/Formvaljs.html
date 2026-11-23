@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Validation</title>
+    <style>
+        body { font-family: sans-serif; margin: 30px; }
+        div { margin-bottom: 12px; }
+        label { display: inline-block; width: 80px; }
+        span { color: red; font-size: 13px; margin-left: 8px; }
+    </style>
+</head>
+<body>
+
+    <h3>Registration Form</h3>
+    <form onsubmit="return validateForm()">
+        <div>
+            <label>Name:</label>
+            <input type="text" id="name">
+            <span id="nameErr"></span>
+        </div>
+
+        <div>
+            <label>Mobile:</label>
+            <input type="text" id="mobile">
+            <span id="mobileErr"></span>
+        </div>
+
+        <div>
+            <label>Email:</label>
+            <input type="text" id="email">
+            <span id="emailErr"></span>
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        function validateForm() {
+
+            let name = document.getElementById("name").value.trim();
+            let mobile = document.getElementById("mobile").value.trim();
+            let email = document.getElementById("email").value.trim();
+
+
+            document.getElementById("nameErr").innerText = "";
+            document.getElementById("mobileErr").innerText = "";
+            document.getElementById("emailErr").innerText = "";
+
+            let valid = true;
+
+
+            if (name === "" || !/^[A-Za-z\s]+$/.test(name)) {
+                document.getElementById("nameErr").innerText = "Enter a valid name (letters only).";
+                valid = false;
+            }
+
+
+            if (!/^[6-9]\d{9}$/.test(mobile)) {
+                document.getElementById("mobileErr").innerText = "Enter a valid 10-digit mobile number.";
+                valid = false;
+            }
+
+
+            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                document.getElementById("emailErr").innerText = "Enter a valid email address.";
+                valid = false;
+            }
+
+            if (valid) {
+                alert("Form submitted successfully!");
+            }
+
+            return valid;
+        }
+    </script>
+
+</body>
+</html>
+

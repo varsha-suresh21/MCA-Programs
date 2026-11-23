@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <title> STUDENT REGISTRATION FORM </title>
+</head>
+<body>
+      <h1 align="center"> STUDENT REGISTRATION FORM </h1>
+      
+      <form>
+
+            <label>Full Name:</label>
+            <input type="text" name="name" required 
+                   pattern="[A-Za-z\s]+" 
+                   title="Please enter letters and spaces only.">
+            <br><br>
+            
+            <label> Date of Birth: </label>
+            <input type="date" name="dob" required>
+            <br><br>
+            
+            <label> Gender: </label>
+            <input type="radio" name="gender" value="male" required> Male
+            <input type="radio" name="gender" value="female"> Female
+            <input type="radio" name="gender" value="other"> Other
+            <br><br>
+            
+
+            <label> Email: </label>
+            <input type="email" name="email" required 
+                   title="Please enter a valid email address (e.g., name@example.com).">
+            <br><br>
+            
+
+            <label> Phone Number: </label>
+            <input type="tel" name="phone" required 
+                   pattern="[0-9]{10}" 
+                   minlength="10" 
+                   maxlength="10" 
+                   title="Please enter exactly a 10-digit mobile number without spaces or symbols.">
+            <br><br>
+            
+            <label> Address </label><br>
+            <textarea name="address" rows="4" cols="40" required></textarea>
+            <br><br>
+            
+            <label> Academic Qualification:</label>
+            <select name="qualification" required>
+                  <option value="">--Select--</option>
+                  <option value="10th">10th</option>
+                  <option value="12th">12th</option>
+                  <option value="degree">Degree</option>
+                  <option value="pg">Post Graduate</option>
+            </select>
+            <br><br>
+            
+            <label> Select Course:</label> 
+            <select name="course" required>
+                  <option value="">--Select Course--</option>
+                  <option value="BCA">BCA</option>
+                  <option value="BSc">BSc Computer Science</option>
+                  <option value="MCA">MCA</option>
+                  <option value="MSc">MSC Computer Science</option>
+            </select>
+            <br><br>
+            
+            <button type="submit">Submit Registration</button>
+            <button type="reset">Reset Form</button>
+      </form>
+</body>
+</html>
+

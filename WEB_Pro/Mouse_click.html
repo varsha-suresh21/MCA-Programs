@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+ <title> Mouse Click Events </title>
+ </head>
+ <body>
+ 
+ <h2>Mouse Click Events </h2>
+ 
+ <button id="btn">Change Background Color </button>
+ 
+ <script>
+  let button = document.getElementById("btn")
+  
+  button.addEventListener("click",function(){
+   document.body.style.backgroundColor = "red";
+   });
+   
+  button.addEventListener("dblclick",function(){
+   document.body.style.backgroundColor = "green";
+   });
+  </script>
+  </body>
+  </html> 
